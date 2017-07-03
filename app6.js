@@ -47,3 +47,14 @@ var input = [
     ]
   }
 ];
+
+var stars = input.reduce((acc,val) => {
+  val.cast.forEach((item) =>{
+    if(acc.indexOf(item) === -1) {
+      acc.push(item);
+    }
+  });
+  return acc;
+}, []);
+
+console.log(stars);
