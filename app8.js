@@ -35,3 +35,7 @@ var anakin = {
 }
 
 var characters = [luke, han, anakin];
+
+characters.forEach((character) => {
+  console.log(character.name + "'s father was a jedi: ", character.parents.father.jedi);
+});
