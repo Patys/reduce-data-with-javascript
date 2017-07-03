@@ -1,8 +1,14 @@
-var data = [1,2,3,4];
+var data = ["vote1","vote2","vote2","vote3"];
 
 function reducer(acc, val) {
-  return acc + val;
+  if(acc[val]) {
+    acc[val] += 1;
+  }
+  else {
+    acc[val] = 1;
+  }
+  return acc;
 }
 
-var sum = data.reduce(reducer);
-console.log(sum);
+var tally = data.reduce(reducer);
+console.log(tally);
