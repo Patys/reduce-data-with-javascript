@@ -36,3 +36,22 @@ var filteredAndMapped =
     .map((item) => item*2);
 
 console.log(filteredAndMapped);
+
+var bigData = [];
+for(let i = 0; i < 100000; i++) {
+  bigData[i] = i;
+}
+
+console.time('bigdataFM');
+var fmBigData = bigData
+  .filter((item)=> (item%2===0))
+  .map((item)=> (item*2));
+console.timeEnd('bigdataFM');
+
+console.time('bigdata');
+var reducedBigData = bigData.reduce((acc, val) => {
+  if(val % 2 === 0)
+    acc.push(val*2);
+  return acc;
+},[]);
+console.timeEnd('bigdata');
