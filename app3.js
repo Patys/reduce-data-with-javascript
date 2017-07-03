@@ -5,4 +5,8 @@ var doubled = data.reduce(function(acc, value) {
   return acc;
 }, []);
 
-console.log(doubled);
+var doubledMapped = data.map(function(item) {
+  return item * 2;
+});
+
+console.log(doubledMapped);
