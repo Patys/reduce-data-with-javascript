@@ -1,4 +1,4 @@
-var data = [];
+var data = [15,21,2];
 
 var reducer = function(accumulator, item) {
   return accumulator + item;
