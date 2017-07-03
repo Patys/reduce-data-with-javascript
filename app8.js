@@ -36,6 +36,16 @@ var anakin = {
 
 var characters = [luke, han, anakin];
 
+function fatherWasJedi(character) {
+  let path = "parents.father.jedi";
+  return path.split(".").reduce((obj, field) => {
+    if(obj) {
+      return obj[field];
+    }
+    return false;
+  }, character);
+}
+
 characters.forEach((character) => {
-  console.log(character.name + "'s father was a jedi: ", character.parents.father.jedi);
+  console.log(character.name + "'s father was a jedi: ", fatherWasJedi(character));
 });
