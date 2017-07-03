@@ -27,3 +27,12 @@ var evensFiltered = data2.filter(function(item) {
 });
 
 console.log(evensFiltered);
+
+///////////
+
+var filteredAndMapped =
+  data2
+    .filter((item) => (item%2===0))
+    .map((item) => item*2);
+
+console.log(filteredAndMapped);
