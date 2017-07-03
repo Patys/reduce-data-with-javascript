@@ -7,8 +7,8 @@ function reducer(acc, val) {
   else {
     acc[val] = 1;
   }
-  return acc;
+  // return acc;
 }
 
-var tally = data.reduce(reducer);
+var tally = data.reduce(reducer, {});
 console.log(tally);
