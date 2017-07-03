@@ -58,3 +58,12 @@ var stars = input.reduce((acc,val) => {
 }, []);
 
 console.log(stars);
+
+var dataWithLetter = [1,2,3,"4"];
+
+var dataWithLetterReduced = dataWithLetter.reduceRight((acc, val, index) => {
+  console.log(index);
+  return acc + val;
+});
+
+console.log(dataWithLetterReduced);
